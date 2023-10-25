@@ -28,7 +28,7 @@ if [[ ! -x /usr/local/bin/brew ]]; then
 fi
 
 # Clone tilde dotfiles
-if [[ ! -d ~/Workspace/playpen/tilde/ ]]; then
+if [[ ! -d ~/Workspace/playpen/tilde/.git ]]; then
     echo "[i] Cloning dotfiles directory"
     git clone https://github.com/levydotdev/tilde.git ~/Workspace/playpen/tilde
 fi
