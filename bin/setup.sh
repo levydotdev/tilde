@@ -11,7 +11,7 @@ cd
 mkdir -p ~/Workspace/playpen/tilde
 
 # Install Command Line Tools
-if [[ ! -x /usr/bin/gcc ]]; then
+if [[ ! -x /Library/Developer/CommandLineTools/usr/bin/git ]]; then
   echo "[i] Install macOS Command Line Tools"
   xcode-select --install
 fi
