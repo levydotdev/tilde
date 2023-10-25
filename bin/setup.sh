@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e
 
 echo "[i] Ask for admin permissions"
@@ -13,7 +13,11 @@ mkdir -p ~/Workspace/playpen/tilde
 # Install Command Line Tools
 if [[ ! -x /Library/Developer/CommandLineTools/usr/bin/git ]]; then
   echo "[i] Install macOS Command Line Tools"
-  xcode-select --install
+  xcode-select --install &> /dev/null
+
+  until $(xcode-select --print-path &> /dev/null); do
+    sleep 5;
+  done
 fi
 
 # Install homebrew
