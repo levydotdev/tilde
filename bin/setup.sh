@@ -23,8 +23,8 @@ fi
 # Install homebrew
 if [[ ! -x /usr/local/bin/brew ]]; then
   echo "[i] Install Homebrew"
-  # get this from https://brew.sh/
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # instructions: https://brew.sh/
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Clone tilde dotfiles
