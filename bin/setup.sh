@@ -33,12 +33,8 @@ if [[ ! -d ~/Workspace/playpen/tilde/ ]]; then
     git clone https://github.com/levydotdev/tilde.git ~/Workspace/playpen/tilde
 fi
 
-# Move to dotfiles directory
-cd ~/Workspace/playpen/tilde
-$SHELL
-
 echo "[i] Get latest versions of dotfiles"
-git pull origin main
+cd ~/Workspace/playpen/tilde && git pull origin main
 
 echo "[i] Done."
 exit 0
