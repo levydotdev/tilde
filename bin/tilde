@@ -45,7 +45,7 @@ if [[ ! -x "$(command -v chezmoi)" ]]; then
 fi
 
 # Checkout tilde dotfiles
-chezmoi init levydotdev/tilde --source ~/.tilde
+chezmoi init levydotdev/tilde --ssh --source ~/.tilde
 
 info "Done."
 exit 0
